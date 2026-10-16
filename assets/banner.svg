@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#1b263b" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#00c6ff" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: -1px;
+      }
+      .body-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 500;
+      }
+      .mono-text {
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.08); }
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -40; }
+      }
+      @keyframes particleMove {
+        0% { transform: translateY(0) translateX(0); opacity: 0; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(-70px) translateX(25px); opacity: 0; }
+      }
+      .animated-float {
+        animation: floatSlow 5s ease-in-out infinite;
+      }
+      .animated-pulse {
+        animation: pulseGlow 4s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      .animated-flow {
+        stroke-dasharray: 8 6;
+        animation: dashMove 2s linear infinite;
+      }
+      .particle-1 { animation: particleMove 4s ease-in-out infinite; }
+      .particle-2 { animation: particleMove 5s ease-in-out infinite 1.5s; }
+      .particle-3 { animation: particleMove 3.5s ease-in-out infinite 0.7s; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Ambient Glows in Background -->
+  <circle cx="150" cy="80" r="140" fill="url(#glowGrad)" class="animated-pulse" />
+  <circle cx="1060" cy="240" r="180" fill="url(#glowGrad)" class="animated-pulse" style="animation-delay: -2s;" />
+
+  <!-- Tech Grid Background Pattern -->
+  <g opacity="0.08" stroke="#00f2fe" stroke-width="1">
+    <line x1="0" y1="68" x2="1200" y2="68" />
+    <line x1="0" y1="136" x2="1200" y2="136" />
+    <line x1="0" y1="204" x2="1200" y2="204" />
+    <line x1="0" y1="272" x2="1200" y2="272" />
+    <line x1="200" y1="0" x2="200" y2="340" />
+    <line x1="400" y1="0" x2="400" y2="340" />
+    <line x1="600" y1="0" x2="600" y2="340" />
+    <line x1="800" y1="0" x2="800" y2="340" />
+    <line x1="1000" y1="0" x2="1000" y2="340" />
+  </g>
+
+  <!-- Animated Data Flow / Connection Stream Lines behind cards -->
+  <path d="M 820 170 Q 940 100 1080 160" fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.3" class="animated-flow" />
+  <path d="M 850 250 Q 970 300 1120 220" fill="none" stroke="#ff007f" stroke-width="2" opacity="0.25" class="animated-flow" style="animation-duration: 3s;" />
+
+  <!-- Dynamic Flying Code Particles -->
+  <circle cx="950" cy="220" r="2.5" fill="#00f2fe" class="particle-1" />
+  <circle cx="1020" cy="180" r="3" fill="#ff007f" class="particle-2" />
+  <circle cx="1110" cy="240" r="2" fill="#4facfe" class="particle-3" />
+
+  <!-- Decorative Right Side Glassmorphic Tech Cards (Kept well clear of title area) -->
+  <g class="animated-float" filter="url(#shadow)">
+    <!-- ASGI Event Loop Card -->
+    <rect x="850" y="55" width="290" height="100" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2" />
+    <circle cx="878" cy="85" r="14" fill="#0284c7" opacity="0.2" />
+    <text x="878" y="90" font-size="14" text-anchor="middle" fill="#38bdf8">⚡</text>
+    <text x="905" y="82" fill="#f8fafc" font-size="14" class="title-text">Event Loop Engine</text>
+    <text x="905" y="100" fill="#94a3b8" font-size="11" class="mono-text">Granian • Uvicorn • uvloop</text>
+    <rect x="870" y="122" width="250" height="14" rx="4" fill="#0f172a" />
+    <rect x="870" y="122" width="210" height="14" rx="4" fill="url(#primaryGrad)" opacity="0.8" />
+    <text x="995" y="133" fill="#ffffff" font-size="9" text-anchor="middle" class="mono-text">1.2M+ req/sec throughput</text>
+
+    <!-- Async Worker Node Card -->
+    <rect x="820" y="180" width="320" height="105" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2" />
+    <circle cx="850" cy="210" r="14" fill="#10b981" opacity="0.2" />
+    <text x="850" y="215" font-size="14" text-anchor="middle" fill="#34d399">🚀</text>
+    <text x="875" y="208" fill="#f8fafc" font-size="14" class="title-text">ASGI 3.0 Protocol</text>
+    <text x="875" y="226" fill="#94a3b8" font-size="11" class="mono-text">HTTP • WebSockets • Lifespan</text>
+    <g transform="translate(875, 245)">
+      <rect x="0" y="0" width="68" height="22" rx="11" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="34" y="15" fill="#38bdf8" font-size="10" text-anchor="middle" class="mono-text">FastAPI</text>
+      <rect x="76" y="0" width="70" height="22" rx="11" fill="#1e293b" stroke="#a78bfa" stroke-width="0.8" />
+      <text x="111" y="15" fill="#c084fc" font-size="10" text-anchor="middle" class="mono-text">Litestar</text>
+      <rect x="154" y="0" width="76" height="22" rx="11" fill="#1e293b" stroke="#34d399" stroke-width="0.8" />
+      <text x="192" y="15" fill="#34d399" font-size="10" text-anchor="middle" class="mono-text">Starlette</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND: Clean, Legible, High-Contrast Title & Subtitle Area -->
+  <g transform="translate(70, 0)">
+    <!-- Top Category Pill -->
+    <g transform="translate(0, 52)">
+      <rect width="270" height="32" rx="16" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" />
+      <circle cx="16" cy="16" r="5" fill="#00f2fe" class="animated-pulse" />
+      <text x="32" y="21" fill="#38bdf8" font-size="12" class="mono-text" font-weight="bold">CURATED PYTHON ASYNC STACK</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="145" fill="#ffffff" font-size="44" class="title-text" filter="url(#shadow)">
+      Awesome ASGI Frameworks
+    </text>
+
+    <!-- Gradient Accent Sub-header Line -->
+    <text x="0" y="195" fill="url(#primaryGrad)" font-size="22" class="title-text" font-weight="700">
+      High-Concurrency APIs, Async Microservices &amp; Cloud Runtimes
+    </text>
+
+    <!-- Subtitle / Meta Description -->
+    <text x="0" y="240" fill="#94a3b8" font-size="15" class="body-text">
+      The definitive index of Python ASGI frameworks, production servers, PaaS platforms,
+    </text>
+    <text x="0" y="265" fill="#94a3b8" font-size="15" class="body-text">
+      and async toolkits — benchmarked, categorized, and curated for engineers.
+    </text>
+
+    <!-- Bottom Feature Tags -->
+    <g transform="translate(0, 290)">
+      <text x="0" y="0" fill="#64748b" font-size="12" class="mono-text">✨ FastAPI</text>
+      <text x="90" y="0" fill="#64748b" font-size="12" class="mono-text">• Litestar</text>
+      <text x="175" y="0" fill="#64748b" font-size="12" class="mono-text">• Starlette</text>
+      <text x="265" y="0" fill="#64748b" font-size="12" class="mono-text">• Django Channels</text>
+      <text x="405" y="0" fill="#64748b" font-size="12" class="mono-text">• Granian &amp; Uvicorn</text>
+    </g>
+  </g>
+</svg>
