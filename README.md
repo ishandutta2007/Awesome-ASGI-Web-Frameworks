@@ -42,31 +42,14 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[FastAPI Cloud](https://fastapi.tiangolo.com/)**  
-
-  Managed deployment platform for FastAPI applications from the framework's creator. Features **zero-config deployment**, **automatic scaling**, and **OpenAPI-native** integration.
-
-
-
-- **[Litestar Cloud](https://litestar.dev/)**  
-
-  Managed hosting for Litestar applications with **automatic scaling**, **observability**, and **deployment automation**.
-
-
-
-- **[Django hosting providers](https://www.djangoproject.com/)**  
-
-  Managed Django hosting from providers including **Heroku**, **Railway**, and **Render** with **automatic deployments**, **database management**, and **scaling**.
-
-
-
-- **[Starlette hosting](https://www.starlette.io/)**  
-
-  Managed deployment options for Starlette applications on **cloud platforms** with **ASGI server support**.
-
-
+| Platform | Description | Starting Pricing | Free Tier Limits |
+| --- | --- | --- | --- |
+| **[FastAPI Cloud](https://fastapicloud.com/)** | Managed deployment platform for FastAPI applications by the creator of FastAPI. Features zero-config deployment, automatic scaling, and OpenAPI integration. | $20/seat/month (Pro plan; beta flat per-seat pricing before compute metering) | Free forever (Hobby Plan): 0.1 vCPU (burst to 0.5), 512 MB RAM, up to 3 apps, 1 custom domain, 2 max replicas, 1-day log/metric retention |
+| **[Render](https://render.com/)** | Cloud Application Platform offering automated builds and deployment for ASGI/WSGI applications (Django, FastAPI, Starlette, Litestar). | $7/month (Starter instance, 0.5 CPU, 512 MB RAM; $0/month Hobby workspace) | Free forever (Hobby Web Service): 750 instance hours/month, 512 MB RAM, spins down after 15 minutes of inactivity; 5 GB outbound bandwidth/month; Free PostgreSQL expires after 30 days (1 GB) |
+| **[Railway](https://railway.com/)** | Modern infrastructure platform for deploying async Python APIs and full-stack services with minimal configuration. | $5/month (Hobby plan base with $5 included usage credit; compute billed per second at ~$10/GB-mo RAM & ~$20/vCPU-mo) | Free forever (Free Plan): $1/month included usage credit, 1 active project, 1 vCPU, 512 MB RAM, 1 replica, 3-day log retention (or 30-day trial with $5 one-time credit) |
+| **[Koyeb](https://koyeb.com/)** | Serverless PaaS designed for high-performance APIs and microservices with built-in global edge routing. | $29/month (Pro plan base with $10 compute credit included) | Free forever: 1 Eco/Free instance (0.1 vCPU, 512 MB RAM, 2 GB SSD), single region, spins down to sleep after 1 hour of inactivity |
+| **[Fly.io](https://fly.io/)** | Global container execution platform running ASGI servers close to users via lightweight Firecracker microVMs. | ~$2.19/month (`shared-cpu-1x`, 256 MB RAM continuous baseline; pay-as-you-go) | Free trial only: 2 hours total Machine runtime or 7 calendar days (whichever expires first), no credit card required upfront; no permanent free compute tier |
+| **[Heroku](https://www.heroku.com/)** | Managed container-based cloud PaaS supporting Python/ASGI workloads via Procfile and custom buildpacks. | $5/month (Eco Dynos share a 1,000-hour monthly dyno pool; apps sleep after 30 mins inactivity) | No free tier or public trial (discontinued in Nov 2022); verified students receive $13/month in GitHub Student Developer Pack credits for 24 months ($312 total) |
 
 ## Open-Source GitHub Projects
 
