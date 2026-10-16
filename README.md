@@ -66,7 +66,7 @@ The sector exhibits a **hybrid structure with a concentrated core and a fragment
 
 ## 🐙 Open-Source GitHub Projects
 
-*Ranked strictly by GitHub Stars count (descending).* 🌟
+*Ranked strictly by GitHub_Stars_Count (descending).* 🌟
 
 ### ⚡ Top ASGI & Async Python Frameworks
 
@@ -155,7 +155,7 @@ Contributions are welcome and highly appreciated! 💖
 
 1. Fork this repository 🍴
 2. Create a new branch: `git checkout -b feature/awesome-entry`
-3. Add or edit entries in `README.md` following the existing format (include repo link, star badge, license, and factual description) 📝
+3. Add or edit entries in `README.md` following the existing format (include repo link, Stars_Badge, license, and factual description) 📝
 4. Verify all markdown links and ensure proper categorization 🔍
 5. Commit your changes: `git commit -m 'Add new ASGI framework or tool'`
 6. Push to your branch and open a Pull Request! 🎉
